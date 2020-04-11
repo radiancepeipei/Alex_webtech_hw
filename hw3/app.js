@@ -2,11 +2,11 @@ var express = require('express');
 var todoController = require('./controllers/todocontrollers');
 var app = express();
 
-// set up template engine
+// 宣告 view engine tempalate 為 ejs
 app.set('view engine', 'ejs');
 
 //static files
-app.use(express.static('/public'));
+app.use(express.static('./public'));
 
 //fire controllers
 todoController(app);
